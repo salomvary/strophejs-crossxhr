@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta charset="utf-8">
+		<script src="strophejs/src/base64.js"></script>
+		<script src="strophejs/src/md5.js"></script>
+		<script src="strophejs/src/core.js"></script>
+		<script src="strophe-crossxhr.js"></script>
+		<script>
+			document.domain = document.domain;
+			function connect() {
+				var service = 'http://chat.example.com:15280';
+					jid = 'bar@example.com/strophe-test',
+					password = 'a',
+					out = document.getElementById('out');
+
+				Strophe.crossXHR(service + '/newxhr.html', function() {
+					var connection = new Strophe.Connection(service + '/http-bind');
+					connection.connect(jid, password, function(state) {
+						for(var statusName in Strophe.Status) 
+							if(Strophe.Status[statusName] === state) break;
+						out.innerHTML = statusName;
+					});
+				}, 
+				function(err) {
+					out.innerHTML = 'Error loading crossXHR iframe: '+err;
+				});
+			}
+		</script>
+	</head>
+	<body onload="connect()">
+		<p>
+			You should see "CONNECTED" here after a few seconds: 
+			<b id="out"></b>
+		</p>
+	</body>
+</html>
+

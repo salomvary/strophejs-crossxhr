@@ -1,0 +1,3 @@
+[submodule "strophejs"]
+	path = strophejs
+	url = https://github.com/metajack/strophejs.git

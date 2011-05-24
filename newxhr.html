@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<script>
+			document.domain = 'example.com';
+			function newXHR() {
+				if (window.XMLHttpRequest) {
+					return new XMLHttpRequest();
+				} else if (window.ActiveXObject) {
+					return new ActiveXObject("Microsoft.XMLHTTP");
+				}
+			}
+		</script>
+	</head>
+</html>
