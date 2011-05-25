@@ -9,6 +9,15 @@ hack.
 ## Trying the example code
 Suppose your XMPP BOSH service is at http://chat.example.com:5280/http-bind and want to use it from http://example.com:5280/test.html
 
+Get the code:
+
+ git clone http://github.com/salomvary/strophejs-crossxhr.git
+ cd strophejs-crossxhr
+ git submodule init
+ git submodule update
+
+Customize the code:
+
 - edit service, jid and password in test.html
 - serve test.html from example.com:5280
 - set your domain in newxhr.html 
