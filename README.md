@@ -20,6 +20,7 @@ See JSDoc comments in strophe-crosshxr.js and the example code.
 
 ## Compatibility
 Tested with:
+
 - Chrome 11
 - Firefox 4
 - IE9-8-7
