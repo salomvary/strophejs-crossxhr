@@ -11,10 +11,10 @@ Suppose your XMPP BOSH service is at http://chat.example.com:5280/http-bind and 
 
 Get the code:
 
- git clone http://github.com/salomvary/strophejs-crossxhr.git
- cd strophejs-crossxhr
- git submodule init
- git submodule update
+	git clone http://github.com/salomvary/strophejs-crossxhr.git
+	cd strophejs-crossxhr
+	git submodule init
+	git submodule update
 
 Customize the code:
 
